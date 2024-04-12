@@ -17,3 +17,4 @@ const donationSchema = new Schema<Donation>({
 });
 
 export const DonationMongoose = model("Donation", donationSchema);
+

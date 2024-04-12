@@ -8,3 +8,4 @@ const candidateSchema = new Schema<Candidate>({
 });
 
 export const CandidateMongoose = model("Candidate", candidateSchema);
+

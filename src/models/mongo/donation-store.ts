@@ -4,10 +4,6 @@ import { DonationMongoose } from "./donation.js";
 export const donationStore = {
   async find(): Promise<Donation[]> {
     const donations = await DonationMongoose.find().populate("donor").populate("candidate").lean();
-    donations.forEach((donation) => {
-      // @ts-ignore
-      donation.donor = `${donation.donor.firstName} ${donation.donor.lastName}`;
-    });
     return donations;
   },
 
@@ -29,3 +25,4 @@ export const donationStore = {
     await DonationMongoose.deleteMany({});
   },
 };
+

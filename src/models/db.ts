@@ -15,3 +15,4 @@ export function connectDb(dbType: string) {
     default:
   }
 }
+

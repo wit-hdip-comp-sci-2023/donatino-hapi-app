@@ -9,3 +9,4 @@ const userSchema = new Schema<User>({
 });
 
 export const UserMongoose = model("User", userSchema);
+

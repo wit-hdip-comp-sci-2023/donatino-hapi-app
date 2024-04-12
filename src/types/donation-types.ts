@@ -1,17 +1,17 @@
-export type User = {
+export interface User {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
   _id: string;
-};
+}
 
-export type Candidate = {
+export interface Candidate {
   firstName: string;
   lastName: string;
   office: string;
   _id: string;
-};
+}
 
 export interface Donation {
   amount: number;
@@ -22,8 +22,9 @@ export interface Donation {
   lng: number;
 }
 
-export type Db = {
+export interface Db {
   userStore: any;
   candidateStore: any;
   donationStore: any;
-};
+}
+
